@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import './Home.css'
@@ -10,6 +10,18 @@ import credibilityImg from '../../assets/images/home_page_bg.jpeg'
 
 function Home() {
   const rootRef = useRef(null)
+  const location = useLocation()
+
+  // Scroll to a section when navigated here with state (e.g. "Knowledge Centre" from the nav)
+  useEffect(() => {
+    const target = location.state?.scrollTo
+    if (!target) return
+    const el = document.getElementById(target)
+    if (el) {
+      // Defer so layout/images settle before scrolling
+      setTimeout(() => el.scrollIntoView({ behavior: 'smooth', block: 'start' }), 100)
+    }
+  }, [location])
 
   useEffect(() => {
     AOS.init({
@@ -227,6 +239,62 @@ function Home() {
                   <div className="csr"><div className="v">80+</div><div className="k">Cup score</div></div>
                 </div>
                 <span className="cat-link">View products <span className="arr">→</span></span>
+              </div>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* ============ KNOWLEDGE CENTRE ============ */}
+      <section className="section bg-soft" id="knowledge">
+        <div className="wrap">
+          <div className="know-head" data-aos="fade-up">
+            <div className="kh-copy">
+              <span className="eyebrow">Knowledge Centre</span>
+              <h2 className="h2">Buyer education, not marketing.</h2>
+              <p className="lead">The reference desk we wish existed when we started — written to help you
+                specify correctly and buy with confidence.</p>
+            </div>
+            <Link to="/market-intelligence" className="btn btn-outline">All articles <span className="arr">→</span></Link>
+          </div>
+          <div className="know-grid">
+            <Link to="/market-intelligence" className="know-card" data-aos="fade-up">
+              <div className="know-img">
+                <div className="ph warm-ph"></div>
+                <span className="know-cat">Chilli</span>
+              </div>
+              <div className="know-body">
+                <div className="know-meta">Specification · 6 min</div>
+                <h3>Understanding SHU and ASTA — and why buyers confuse them</h3>
+                <p>Pungency and colour are measured on entirely different scales. Here is how to read
+                  both, and what they mean for your end use.</p>
+                <span className="txt-link">Read article <span className="arr">→</span></span>
+              </div>
+            </Link>
+            <Link to="/market-intelligence" className="know-card" data-aos="fade-up" data-aos-delay="100">
+              <div className="know-img">
+                <div className="ph warm-ph"></div>
+                <span className="know-cat">Chilli</span>
+              </div>
+              <div className="know-body">
+                <div className="know-meta">Variety · 7 min</div>
+                <h3>Teja vs Byadgi: choosing the right chilli variety</h3>
+                <p>One is bought for heat and oleoresin yield, the other for deep red colour with low
+                  pungency. Picking wrong is an expensive mistake.</p>
+                <span className="txt-link">Read article <span className="arr">→</span></span>
+              </div>
+            </Link>
+            <Link to="/market-intelligence" className="know-card" data-aos="fade-up" data-aos-delay="200">
+              <div className="know-img">
+                <div className="ph green-ph"></div>
+                <span className="know-cat">Coffee</span>
+              </div>
+              <div className="know-body">
+                <div className="know-meta">Processing · 8 min</div>
+                <h3>Coffee processing methods, and how they change the cup</h3>
+                <p>Washed, natural, honey and monsooned — what each does to acidity, body and flavour,
+                  and which buyers ask for what.</p>
+                <span className="txt-link">Read article <span className="arr">→</span></span>
               </div>
             </Link>
           </div>
