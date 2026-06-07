@@ -92,7 +92,7 @@ const productData = {
         image: byadgiImg,
         altImage: byadgiImg,
         tagline: 'Vibrant Color. Mild Heat. Global Quality.',
-        heroDescription: 'Internationally recognized for its high ASTA color value and mild pungency — preferred in markets where vibrant red color is commercially more important than heat intensity.',
+        heroDescription: 'Internationally recognized for its high ASTA color value and mild pungency, preferred in markets where vibrant red color is commercially more important than heat intensity.',
         highlights: [
             { value: 'High ASTA', label: 'Color Value' },
             { value: 'Low–Med', label: 'Pungency' },
@@ -159,7 +159,7 @@ const productData = {
         image: tejaImg,
         altImage: tejaAltImg,
         tagline: 'Hot. Spicy. Premium Indian Export Chilli.',
-        heroDescription: 'One of the hottest commercial chilli varieties exported from India — widely demanded in high-heat spice markets due to its elevated capsaicin levels.',
+        heroDescription: 'One of the hottest commercial chilli varieties exported from India, widely demanded in high-heat spice markets due to its elevated capsaicin levels.',
         highlights: [
             { value: '50,000+', label: 'SHU' },
             { value: '< 12%', label: 'Moisture' },
@@ -225,7 +225,7 @@ const productData = {
         image: basmatiImg,
         altImage: basmatiImg,
         tagline: 'Naturally Long. Exceptionally Aromatic.',
-        heroDescription: 'Heritage long-grain aromatic rice cultivated in the Indo-Gangetic plains — globally recognized for its natural fragrance, elongated grain structure, and premium culinary positioning.',
+        heroDescription: 'Heritage long-grain aromatic rice cultivated in the Indo-Gangetic plains, globally recognized for its natural fragrance, elongated grain structure, and premium culinary positioning.',
         highlights: [
             { value: 'Long Grain', label: 'Structure' },
             { value: '12–24 Mo', label: 'Aging' },

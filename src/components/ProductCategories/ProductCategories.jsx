@@ -7,7 +7,7 @@ import riceImg from '../../assets/images/products/rice_cato.jpeg'
 const categories = [
     {
         title: 'Red Chillies',
-        description: 'Premium Guntur, Byadgi & Teja varieties — bold heat, vibrant color, export-grade quality.',
+        description: 'Premium Guntur, Byadgi & Teja varieties, bold heat, vibrant color, export-grade quality.',
         image: chilliImg,
         link: '/what-we-export',
         filter: 'chilli',
@@ -15,7 +15,7 @@ const categories = [
     },
     {
         title: 'Premium Rice',
-        description: 'Traditional Basmati & Sona Masoori — aromatic, long-grain, globally demanded.',
+        description: 'Traditional Basmati & Sona Masoori, aromatic, long-grain, globally demanded.',
         image: riceImg,
         link: '/what-we-export',
         filter: 'rice',

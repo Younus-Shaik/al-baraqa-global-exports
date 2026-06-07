@@ -128,7 +128,7 @@ function TradeTerms() {
                 <h2>Contact Us</h2>
                 <p>For trade inquiries, quotation requests, or questions about our trade terms:</p>
                 <p><strong>Al Baraqah Global Exports</strong></p>
-                <p>21/196, Hyderkhan Street, Proddatur, Kadapa District, Andhra Pradesh — 516360</p>
+                <p>21/196, Hyderkhan Street, Proddatur, Kadapa District, Andhra Pradesh, 516360</p>
                 <p>Email: <a href="mailto:abglobalexports2k26@gmail.com">abglobalexports2k26@gmail.com</a></p>
                 <p>Phone: +91 9030873730</p>
                 <p style={{ marginTop: '1rem' }}>

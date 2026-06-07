@@ -403,7 +403,7 @@ function WhatWeExport() {
           </h2>
           <p className="cta-desc">
             Share your product requirements including variety, quantity, packaging, and
-            destination — we'll provide competitive pricing and export specifications.
+            destination, we'll provide competitive pricing and export specifications.
           </p>
           <div className="cta-buttons">
             <Link to="/contact" className="cta-btn-primary">

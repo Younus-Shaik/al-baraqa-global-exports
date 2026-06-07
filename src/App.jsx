@@ -10,6 +10,13 @@ import ProductDetail from './pages/ProductDetail/ProductDetail'
 import OperationalModel from './pages/OperationalModel'
 import MarketIntelligence from './pages/MarketIntelligence'
 import Contact from './pages/Contact'
+import Chilli from './pages/Chilli'
+import Coffee from './pages/Coffee'
+import Knowledge from './pages/Knowledge'
+import Resources from './pages/Resources'
+import ExportProcess from './pages/ExportProcess'
+import MarketInsights from './pages/MarketInsights'
+import About from './pages/About'
 import PrivacyPolicy from './pages/Legal/PrivacyPolicy'
 import TermsOfService from './pages/Legal/TermsOfService'
 import TradeTerms from './pages/Legal/TradeTerms'
@@ -23,6 +30,13 @@ function App() {
       <div className="container">
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/chilli" element={<Chilli />} />
+          <Route path="/coffee" element={<Coffee />} />
+          <Route path="/knowledge" element={<Knowledge />} />
+          <Route path="/export-process" element={<ExportProcess />} />
+          <Route path="/market-insights" element={<MarketInsights />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/resources" element={<Resources />} />
           <Route path="/vision" element={<Vision />} />
           <Route path="/our-team" element={<WhoWeAre />} />
           <Route path="/what-we-export" element={<WhatWeExport />} />

@@ -82,7 +82,7 @@
   flex-wrap: nowrap;
 }
 
-.nav-links > a,
+.nav-links > a:not(.nav-cta),
 .nav-drop__btn {
   position: relative;
   text-decoration: none;
@@ -99,7 +99,7 @@
   transition: color .2s ease;
 }
 
-.nav-links > a::after {
+.nav-links > a:not(.nav-cta)::after {
   content: "";
   position: absolute;
   left: 0;
@@ -133,6 +133,17 @@
   position: relative;
 }
 
+/* Invisible bridge across the gap so the menu stays reachable on hover */
+.nav-drop::after {
+  content: "";
+  position: absolute;
+  left: -10px;
+  right: -10px;
+  top: 100%;
+  height: 28px;
+  background: transparent;
+}
+
 .nav-drop__btn {
   display: inline-flex;
   align-items: center;
@@ -153,16 +164,25 @@
 .nav-drop:hover .nav-drop__btn { color: var(--nav-navy); }
 .nav-drop:hover .nav-drop__btn::after { transform: rotate(225deg) translateY(-2px); }
 
+/* Kill the global button:hover/focus background tint on the dropdown trigger */
+.nav-links .nav-drop__btn:hover,
+.nav-links .nav-drop__btn:focus,
+.nav-links .nav-drop__btn:focus-visible {
+  background: none;
+  border: 0;
+  outline: none;
+}
+
 .nav-menu {
   position: absolute;
   top: calc(100% + 14px);
   left: 50%;
   transform: translateX(-50%) translateY(8px);
-  min-width: 268px;
+  min-width: 300px;
   background: #fff;
   border: 1px solid var(--nav-line);
-  border-radius: 12px;
-  box-shadow: 0 8px 18px rgba(13, 27, 42, .07), 0 22px 48px -20px rgba(13, 27, 42, .16);
+  border-radius: 14px;
+  box-shadow: 0 8px 18px rgba(13, 27, 42, .07), 0 28px 56px -22px rgba(13, 27, 42, .26);
   padding: 10px;
   opacity: 0;
   visibility: hidden;
@@ -191,17 +211,31 @@
 
 .nav-menu__item {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
-  padding: 11px 13px;
-  border-radius: 8px;
+  align-items: center;
+  gap: 13px;
+  padding: 11px 12px;
+  border-radius: 10px;
   text-decoration: none;
-  transition: background .2s;
-  border-left: 3px solid transparent;
+  transition: background .2s ease;
 }
 
-.nav-menu__item.chilli:hover { background: var(--nav-copper-050); border-left-color: var(--nav-copper); }
-.nav-menu__item.coffee:hover { background: var(--nav-green-050); border-left-color: var(--nav-green); }
+.nav-menu__item:hover { background: var(--nav-warm); }
+
+.nav-menu__item .nm-ic {
+  width: 40px;
+  height: 40px;
+  flex: none;
+  border-radius: 10px;
+  display: grid;
+  place-items: center;
+  transition: transform .2s ease;
+}
+.nav-menu__item .nm-ic svg { width: 20px; height: 20px; }
+.nav-menu__item.chilli .nm-ic { background: var(--nav-copper-050); color: var(--nav-copper); }
+.nav-menu__item.coffee .nm-ic { background: var(--nav-green-050); color: var(--nav-green); }
+.nav-menu__item:hover .nm-ic { transform: scale(1.07); }
+
+.nav-menu__item .nm-txt { display: flex; flex-direction: column; gap: 2px; }
 
 .nav-menu__item .nm-t {
   font-family: 'Libre Franklin', system-ui, sans-serif;
@@ -217,21 +251,30 @@
 
 /* ---------- Request Quote CTA ---------- */
 .nav-cta {
-  background: var(--nav-navy);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: linear-gradient(135deg, #c39c7e 0%, #B08968 52%, #946b4c 100%);
   color: #fff !important;
-  padding: 11px 20px;
-  border-radius: 4px;
+  padding: 11px 22px;
+  border-radius: 8px;
   font-family: 'Libre Franklin', system-ui, sans-serif;
   font-size: 14px;
   font-weight: 600;
   white-space: nowrap;
   text-decoration: none;
-  transition: background .2s ease;
+  box-shadow: 0 6px 16px -5px rgba(176, 137, 104, .55), inset 0 1px 0 rgba(255, 255, 255, .18);
+  transition: transform .2s ease, box-shadow .2s ease, filter .2s ease;
 }
 
 .nav-cta:hover {
-  background: var(--nav-copper);
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+  box-shadow: 0 12px 24px -7px rgba(176, 137, 104, .65), inset 0 1px 0 rgba(255, 255, 255, .22);
 }
+
+.nav-cta .cta-arr { transition: transform .2s ease; }
+.nav-cta:hover .cta-arr { transform: translateX(3px); }
 
 .nav-cta::after {
   display: none !important;
@@ -258,11 +301,20 @@
   transition: transform .25s ease, opacity .2s ease;
 }
 
+.hamburger:hover,
+.hamburger:focus,
+.hamburger:focus-visible { background: none; border: 0; outline: none; }
+
 .hamburger--active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .hamburger--active span:nth-child(2) { opacity: 0; }
 .hamburger--active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ---------- Responsive ---------- */
+@keyframes mobileMenuSlide {
+  from { opacity: 0; transform: translateY(-8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
 @media (max-width: 1280px) {
   .glass-nav { padding: 6px 36px; }
   .nav-links > a, .nav-drop__btn { font-size: 13.5px; }
@@ -297,14 +349,9 @@
     animation: mobileMenuSlide .3s ease-out;
   }
 
-  @keyframes mobileMenuSlide {
-    from { opacity: 0; transform: translateY(-8px); }
-    to { opacity: 1; transform: translateY(0); }
-  }
-
   .nav-links--open { display: flex; }
 
-  .nav-links > a,
+  .nav-links > a:not(.nav-cta),
   .nav-drop__btn {
     width: 100%;
     text-align: left;
@@ -313,11 +360,12 @@
     border-bottom: 1px solid #eef0f2;
   }
 
-  .nav-links > a::after { display: none; }
-  .nav-links > a.active { color: var(--nav-copper); }
+  .nav-links > a:not(.nav-cta)::after { display: none; }
+  .nav-links > a.active:not(.nav-cta) { color: var(--nav-copper); }
 
   /* Dropdown becomes an inline accordion on mobile */
   .nav-drop { width: 100%; }
+  .nav-drop::after { display: none; }
   .nav-drop__btn { display: flex; justify-content: space-between; }
   .nav-drop__btn::after { transition: transform .25s; }
   .nav-drop--open .nav-drop__btn::after { transform: rotate(225deg) translateY(-2px); }
@@ -342,13 +390,12 @@
 
   /* CTA full-width copper button at the bottom of the mobile menu */
   .nav-cta {
-    background: var(--nav-copper);
-    text-align: center;
+    display: flex;
+    justify-content: center;
     margin-top: 14px;
     padding: 14px 20px;
     font-size: 15px;
   }
-  .nav-cta:hover { background: #946b4c; }
 
   .brand__logo { height: 3rem; }
   .brand__name-img { height: 2.2rem; }

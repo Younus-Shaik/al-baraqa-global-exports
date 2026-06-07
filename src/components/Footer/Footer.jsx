@@ -61,24 +61,23 @@ function Footer() {
           <div className="footer-column">
             <h3 className="footer-heading">Products</h3>
             <nav className="footer-nav">
-              <Link to="/what-we-export" state={{ category: 'chilli' }} className="footer-link" onClick={scrollToTop}>Dry Red Chilli</Link>
-              <Link to="/what-we-export" state={{ category: 'coffee' }} className="footer-link" onClick={scrollToTop}>Coffee</Link>
-              <Link to="/what-we-export" className="footer-link" onClick={scrollToTop}>Specification Sheets</Link>
+              <Link to="/chilli" className="footer-link" onClick={scrollToTop}>Dry Red Chilli</Link>
+              <Link to="/coffee" className="footer-link" onClick={scrollToTop}>Coffee</Link>
+              <Link to="/resources" className="footer-link" onClick={scrollToTop}>Specification Sheets</Link>
               <Link to="/contact" className="footer-link" onClick={scrollToTop}>Request a Quote</Link>
             </nav>
           </div>
 
-          {/* Column 3: Quick Navigation */}
+          {/* Column 3: Company */}
           <div className="footer-column">
-            <h3 className="footer-heading">Quick Navigation</h3>
+            <h3 className="footer-heading">Company</h3>
             <nav className="footer-nav">
-              <Link to="/" className="footer-link" onClick={scrollToTop}>Home</Link>
-              <Link to="/vision" className="footer-link" onClick={scrollToTop}>Vision</Link>
+              <Link to="/knowledge" className="footer-link" onClick={scrollToTop}>Knowledge Centre</Link>
+              <Link to="/export-process" className="footer-link" onClick={scrollToTop}>Export Process</Link>
+              <Link to="/market-insights" className="footer-link" onClick={scrollToTop}>Market Insights</Link>
+              <Link to="/about" className="footer-link" onClick={scrollToTop}>About</Link>
               <Link to="/our-team" className="footer-link" onClick={scrollToTop}>Our Team</Link>
-              <Link to="/what-we-export" className="footer-link" onClick={scrollToTop}>What We Export</Link>
-              <Link to="/operational-model" className="footer-link" onClick={scrollToTop}>Operational Model</Link>
-              {/* <Link to="/market-intelligence" className="footer-link" onClick={scrollToTop}>Market Intelligence</Link> */}
-              <Link to="/contact" className="footer-link" onClick={scrollToTop}>Contact Us</Link>
+              <Link to="/resources" className="footer-link" onClick={scrollToTop}>Resources</Link>
             </nav>
           </div>
 

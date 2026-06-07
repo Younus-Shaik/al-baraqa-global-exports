@@ -101,7 +101,7 @@ function Home() {
           <div className="hero-copy">
             <span className="eyebrow" data-aos="fade-up">Specialist Agricultural Export · India</span>
             <h1 className="display" data-aos="fade-up" data-aos-delay="80">
-              We understand <span className="serif-em">chilli</span> and <span className="serif-em">coffee</span> — not just shipping.
+              We understand <span className="serif-em">chilli</span> and <span className="serif-em">coffee</span>, not just shipping.
             </h1>
             <p className="lead" data-aos="fade-up" data-aos-delay="160">
               Al Baraqah Global Exports is a focused sourcing and export company built around two
@@ -115,7 +115,7 @@ function Home() {
             <div className="hero-meta" data-aos="fade-up" data-aos-delay="320">
               <div className="hm">
                 <div className="hm-n">2</div>
-                <div className="hm-k">commodity families — dry red chilli &amp; coffee</div>
+                <div className="hm-k">commodity families, dry red chilli &amp; coffee</div>
               </div>
               <div className="hm">
                 <div className="hm-n">5<span className="copper-em">+</span></div>
@@ -180,12 +180,12 @@ function Home() {
               <p className="lead" style={{ color: 'var(--body)' }}>
                 International trade fails on the paperwork far more often than on the product.
                 We treat documentation, compliance and financial structuring as the core of the
-                business — not an afterthought.
+                business, not an afterthought.
               </p>
               <p style={{ marginTop: '16px', color: 'var(--muted)' }}>
                 Run by a Chartered Accountant and an engineering-led execution team, every order
                 is structured around written specifications, clean documentation and risk-aware
-                payment terms — so goods clear without friction and buyers know exactly what they
+                payment terms, so goods clear without friction and buyers know exactly what they
                 are receiving.
               </p>
               <Link to="/vision" className="txt-link" style={{ marginTop: '24px' }}>Read our vision &amp; standards <span className="arr">→</span></Link>
@@ -200,8 +200,8 @@ function Home() {
           <div className="sec-head" data-aos="fade-up">
             <span className="eyebrow">Our Export Portfolio</span>
             <h2 className="h2">Product intelligence, built into the offer.</h2>
-            <p className="lead">Each product is supplied against written specification — varieties,
-              technical parameters and the markets they suit — not a generic brochure.</p>
+            <p className="lead">Each product is supplied against written specification, varieties,
+              technical parameters and the markets they suit, not a generic brochure.</p>
           </div>
           <div className="cat-grid">
             <Link to="/what-we-export" state={{ category: 'chilli' }} className="cat-card" data-aos="fade-up">
@@ -211,7 +211,7 @@ function Home() {
               </div>
               <div className="cat-body">
                 <h3 className="h3">Dry Red Chilli</h3>
-                <p>Guntur Sannam (S4/S10), Byadgi and Teja — selected for the colour, pungency and
+                <p>Guntur Sannam (S4/S10), Byadgi and Teja, selected for the colour, pungency and
                   stem profile each market demands.</p>
                 <div className="cat-spec-row">
                   <div className="csr"><div className="v">35k–1.1L</div><div className="k">SHU range</div></div>
@@ -231,7 +231,7 @@ function Home() {
               </div>
               <div className="cat-body">
                 <h3 className="h3">Coffee</h3>
-                <p>Arabica and Robusta green coffee — washed and natural processing, graded by
+                <p>Arabica and Robusta green coffee, washed and natural processing, graded by
                   screen size, defect count and cup profile.</p>
                 <div className="cat-spec-row">
                   <div className="csr"><div className="v">AA–PB</div><div className="k">Screen grades</div></div>
@@ -252,7 +252,7 @@ function Home() {
             <div className="kh-copy">
               <span className="eyebrow">Knowledge Centre</span>
               <h2 className="h2">Buyer education, not marketing.</h2>
-              <p className="lead">The reference desk we wish existed when we started — written to help you
+              <p className="lead">The reference desk we wish existed when we started, written to help you
                 specify correctly and buy with confidence.</p>
             </div>
             <Link to="/market-intelligence" className="btn btn-outline">All articles <span className="arr">→</span></Link>
@@ -265,7 +265,7 @@ function Home() {
               </div>
               <div className="know-body">
                 <div className="know-meta">Specification · 6 min</div>
-                <h3>Understanding SHU and ASTA — and why buyers confuse them</h3>
+                <h3>Understanding SHU and ASTA, and why buyers confuse them</h3>
                 <p>Pungency and colour are measured on entirely different scales. Here is how to read
                   both, and what they mean for your end use.</p>
                 <span className="txt-link">Read article <span className="arr">→</span></span>
@@ -292,7 +292,7 @@ function Home() {
               <div className="know-body">
                 <div className="know-meta">Processing · 8 min</div>
                 <h3>Coffee processing methods, and how they change the cup</h3>
-                <p>Washed, natural, honey and monsooned — what each does to acidity, body and flavour,
+                <p>Washed, natural, honey and monsooned, what each does to acidity, body and flavour,
                   and which buyers ask for what.</p>
                 <span className="txt-link">Read article <span className="arr">→</span></span>
               </div>
@@ -371,7 +371,7 @@ function Home() {
             </div>
           </div>
           <div className="stat-row" data-aos="fade-up" style={{ marginTop: 'clamp(48px,6vw,80px)' }}>
-            <div className="stat"><div className="n">#1</div><div className="sep"></div><div className="k">India — world's largest producer &amp; exporter of dry red chilli</div></div>
+            <div className="stat"><div className="n">#1</div><div className="sep"></div><div className="k">India, world's largest producer &amp; exporter of dry red chilli</div></div>
             <div className="stat"><div className="n">#<span data-count="6" data-suffix="">0</span></div><div className="sep"></div><div className="k">India among the top global green coffee exporters</div></div>
             <div className="stat"><div className="n"><span data-count="5" data-suffix="+">0</span></div><div className="sep"></div><div className="k">grades &amp; varieties supplied to buyer specification</div></div>
             <div className="stat"><div className="n">100<span className="copper-em">%</span></div><div className="sep"></div><div className="k">orders executed against written specification sheets</div></div>
@@ -390,7 +390,7 @@ function Home() {
             </div>
             <div data-aos="fade-up" data-aos-delay="120">
               <span className="eyebrow">Structured Execution</span>
-              <h2 className="h2" style={{ marginTop: '18px' }}>Managed by a Chartered Accountant — so the paperwork is never the weak link.</h2>
+              <h2 className="h2" style={{ marginTop: '18px' }}>Managed by a Chartered Accountant, so the paperwork is never the weak link.</h2>
               <p className="lead" style={{ marginTop: '18px', color: 'var(--muted)' }}>
                 Product knowledge gets you the right goods. Financial and documentation discipline
                 gets them to you cleanly. Our trade desk is run with a CA's instinct for compliance,
@@ -405,7 +405,7 @@ function Home() {
                 <div className="lead-pill">
                   <span className="lp-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M12 2l8 4v6c0 5-3.5 8-8 10-4.5-2-8-5-8-10V6l8-4z"/></svg></span>
                   <h4>Risk-aware terms</h4>
-                  <p>LC, TT and advance structures aligned to your bank and ours — no surprises mid-transaction.</p>
+                  <p>LC, TT and advance structures aligned to your bank and ours, no surprises mid-transaction.</p>
                 </div>
               </div>
               <Link to="/our-team" className="txt-link" style={{ marginTop: '26px' }}>Meet the leadership team <span className="arr">→</span></Link>
@@ -420,7 +420,7 @@ function Home() {
           <span className="eyebrow on-dark center" data-aos="fade-up">Start a Conversation</span>
           <h2 className="h2" data-aos="fade-up" data-aos-delay="80" style={{ marginTop: '20px' }}>Tell us your product, grade and destination port.</h2>
           <p data-aos="fade-up" data-aos-delay="160">We'll respond with specification options, indicative pricing and an incoterm-clear
-            quotation — usually within two business days.</p>
+            quotation, usually within two business days.</p>
           <div className="cta-actions" data-aos="fade-up" data-aos-delay="240">
             <Link to="/contact" className="btn btn-copper btn-lg">Request a Quotation <span className="arr">→</span></Link>
             <Link to="/what-we-export" className="btn btn-ghost-light btn-lg">View Full Portfolio</Link>

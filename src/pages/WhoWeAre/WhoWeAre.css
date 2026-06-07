@@ -1,1038 +1,234 @@
-/* Our Team Page - Premium Gold/Green Theme */
-.our-team-page {
-    min-height: 100vh;
-}
-
-/* Hero Section - Full Viewport */
-.team-hero {
-    position: relative;
-    /* padding: 2rem; */
-    min-height: calc(100vh - 4rem);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
-    color: white;
-}
-
-.team-hero-background {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    overflow: hidden;
-}
-
-.team-hero-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center 20%;
-    opacity: 0.75;
-    filter: brightness(0.5) saturate(0.8);
-}
-
-.team-hero-content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.team-title {
-    font-size: 4rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: white !important;
-    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-    letter-spacing: 2px;
-}
-
-.team-subtitle {
-    font-size: 1.6rem;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-    color: #ddb93d;
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-.team-tagline {
-    font-size: 1.2rem;
-    color: rgba(255, 255, 255, 0.8);
-    font-style: italic;
-    margin-bottom: 2rem;
-}
-
-/* CTA and Scroll Indicator */
-.team-hero-cta {
-    margin-top: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-}
-
-.team-cta-text {
-    font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.7);
-    font-weight: 400;
-    letter-spacing: 1px;
-}
-
-.scroll-indicator {
-    width: 50px;
-    height: 50px;
-    border: 2px solid #ddb93d;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: bounce 2s ease-in-out infinite;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.scroll-indicator:hover {
-    background: rgba(221, 185, 61, 0.2);
-    transform: scale(1.1);
-}
-
-.scroll-arrow {
-    font-size: 1.5rem;
-    color: #ddb93d;
-    font-weight: bold;
-}
-
-@keyframes bounce {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(10px);
-    }
-}
-
-/* Section Styles */
-.team-section {
-    padding: 5rem 2rem;
-    position: relative;
-}
-
-.team-overview-section {
-    scroll-margin-top: 0;
-    padding: 2rem 2rem 3rem;
-}
-
-.team-section:nth-child(even) {
-    background-color: var(--bg-secondary, #f5f9f6);
-}
-
-.section-header {
-    text-align: center;
-    margin-bottom: 3rem;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: var(--heading-color, #b8941f);
-    margin: 0;
-    position: relative;
-    display: inline-block;
-}
-
-.section-header h2::after {
-    content: '';
-    position: absolute;
-    bottom: -10px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 4px;
-    background: linear-gradient(90deg, #c9a227 0%, #ddb93d 100%);
-    border-radius: 2px;
-}
-
-/* Team Overview Grid */
-.team-overview-section {
-    background: white;
-}
-
-.team-overview-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-.team-card {
-    background: white;
-    border-radius: 1rem;
-    overflow: hidden;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    transition: all 0.3s ease;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 12px 32px rgba(201, 162, 39, 0.2);
-    border-color: #ddb93d;
-}
-
-.team-card:hover {
-    transform: translateY(-8px);
-}
-
-.team-card-image {
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: linear-gradient(135deg, #f5f9f6 0%, #e8f0ea 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 0.5rem;
-}
-
-.team-card-image img {
-    max-width: 90%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.3s ease;
-}
-
-.team-card:hover .team-card-image img {
-    transform: scale(1.03);
-}
-
-.team-card-content {
-    padding: 1.5rem;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-}
-
-.team-card-name {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text-primary, #111111);
-    margin: 0 0 0.5rem;
-}
-
-.team-card-role {
-    display: inline-block;
-    padding: 0.35rem 0.75rem;
-    background: linear-gradient(135deg, #c9a227 0%, #ddb93d 100%);
-    color: #1a1a1a;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-}
-
-.team-card-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
-}
-
-.team-card-bullets li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.5;
-    color: var(--text-secondary, #374151);
-}
-
-.team-card-bullets li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #c9a227;
-    font-weight: bold;
-}
-
-.view-profile-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 0.75rem 1.25rem;
-    background: var(--primary-color, #1a5f3c);
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.view-profile-btn:hover {
-    background: #145230;
-    transform: translateX(4px);
-}
-
-.view-profile-btn .arrow {
-    transition: transform 0.3s ease;
-}
-
-.view-profile-btn:hover .arrow {
-    transform: translateX(4px);
-}
-
-/* Leadership Rhythm Section */
-.leadership-rhythm-section {
-    background: linear-gradient(to bottom, var(--bg-secondary, #f5f9f6) 0%, white 100%);
-}
-
-.leadership-intro {
-    text-align: center;
-    max-width: 900px;
-    margin: 0 auto 3rem;
-}
-
-.leadership-statement {
-    font-size: 1.35rem;
-    line-height: 1.7;
-    color: var(--text-primary, #111111);
-    margin-bottom: 0.75rem;
-    font-weight: 500;
-}
-
-.leadership-roles {
-    font-size: 1.15rem;
-    color: var(--text-secondary, #374151);
-    margin-bottom: 1rem;
-    font-style: italic;
-}
-
-.leadership-flow {
-    font-size: 1.1rem;
-    color: var(--text-secondary, #374151);
-}
-
-.flow-highlight {
-    color: #c9a227;
-    font-weight: 600;
-}
-
-.leadership-pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.leadership-pillar {
-    padding: 1.3rem;
-    background: white;
-    border-radius: 1rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-    border-top: 4px solid #c9a227;
-    transition: all 0.3s ease;
-}
-
-.leadership-pillar:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 24px rgba(201, 162, 39, 0.15);
-}
-
-.pillar-title {
-    font-size: 1.25rem;
-    font-weight: 700;
-    color: var(--text-primary, #111111);
-    margin: 0 0 1rem;
-}
-
-.pillar-bullets {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.pillar-bullets li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: var(--text-secondary, #374151);
-}
-
-.pillar-bullets li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #c9a227;
-    font-weight: bold;
-}
-
-/* Sticky Navigation */
-.sticky-team-nav {
-    position: sticky;
-    top: 70px;
-    z-index: 100;
-    background: white;
-    border-bottom: 1px solid rgba(26, 95, 60, 0.1);
-    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
-    padding: 0.75rem 1rem;
-}
-
-.sticky-nav-container {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex-wrap: wrap;
-}
-
-.sticky-nav-item {
-    padding: 0.5rem 1.25rem;
-    background: var(--bg-secondary, #f5f9f6);
-    color: var(--text-secondary, #374151);
-    border: 1px solid rgba(26, 95, 60, 0.1);
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.sticky-nav-item:hover {
-    background: rgba(201, 162, 39, 0.1);
-    border-color: #ddb93d;
-    color: #8b7319;
-}
-
-.sticky-nav-item.active {
-    background: linear-gradient(135deg, #c9a227 0%, #ddb93d 100%);
-    color: #1a1a1a;
-    border-color: transparent;
-    font-weight: 600;
-}
-
-/* Detailed Profiles Section */
-.detailed-profiles-section {
-    background: white;
-    padding-top: 3rem;
-}
-
-.profile-detail {
-    max-width: 1200px;
-    margin: 0 auto 5rem;
-    padding: 2.5rem;
-    background: var(--bg-secondary, #f5f9f6);
-    border-radius: 1.5rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    scroll-margin-top: 150px;
-}
-
-.profile-detail:last-child {
-    margin-bottom: 0;
-}
-
-.profile-header {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    margin-bottom: 2.5rem;
-    padding-bottom: 2rem;
-    border-bottom: 1px solid rgba(26, 95, 60, 0.1);
-}
-
-.profile-image {
-    width: 150px;
-    height: 180px;
-    border-radius: 1rem;
-    overflow: hidden;
-    flex-shrink: 0;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-    border: 3px solid white;
-}
-
-.profile-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.profile-info {
-    flex: 1;
-}
-
-.profile-name {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--text-primary, #111111);
-    margin: 0 0 0.75rem;
-}
-
-.profile-role-badge {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: linear-gradient(135deg, #c9a227 0%, #ddb93d 100%);
-    color: #1a1a1a;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-}
-
-.profile-content-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-.profile-card {
-    padding: 1.75rem;
-    background: white;
-    border-radius: 1rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-}
-
-.profile-card h4 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    color: #c9a227;
-    margin: 0 0 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid #c9a227;
-}
-
-.profile-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-card ul li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.7;
-    color: var(--text-secondary, #374151);
-}
-
-.profile-card ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #c9a227;
-    font-weight: bold;
-}
-
-.profile-card ul li:last-child {
-    margin-bottom: 0;
-}
-
-.profile-highlight {
-    padding: 2rem;
-    background: linear-gradient(135deg, #1a5f3c 0%, #0f3d26 100%);
-    border-radius: 1rem;
-    color: white;
-    margin-bottom: 1.5rem;
-}
-
-.profile-highlight h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #ddb93d;
-    margin: 0 0 1.25rem;
-    padding-bottom: 0.75rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.profile-highlight ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-highlight ul li {
-    position: relative;
-    padding-left: 1.5rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.profile-highlight ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #ddb93d;
-    font-weight: bold;
-}
-
-.profile-highlight ul li:last-child {
-    margin-bottom: 0;
-}
-
-.back-to-top-btn {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: transparent;
-    color: var(--primary-color, #1a5f3c);
-    border: 1px solid var(--primary-color, #1a5f3c);
-    border-radius: 50px;
-    font-size: 0.875rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.back-to-top-btn:hover {
-    background: var(--primary-color, #1a5f3c);
-    color: white;
-}
-
-/* NEW Profile Layout - 2 Column Grid */
-.profile-detail-new {
-    display: grid;
-    grid-template-columns: 320px 1fr;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto 3rem;
-    padding: 1.5rem;
-    background: var(--bg-secondary, #f5f9f6);
-    border-radius: 1rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    scroll-margin-top: 150px;
-    min-height: fit-content;
-}
-
-.profile-detail-new:last-child {
-    margin-bottom: 2rem;
-}
-
-/* Left Column */
-.profile-left {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-/* Top Left - Image + Name + Role */
-.profile-identity {
-    background: white;
-    border-radius: 1rem;
-    padding: 1.25rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-
-.profile-photo {
-    width: 140px;
-    height: 160px;
-    border-radius: 0.75rem;
-    overflow: hidden;
-    margin-bottom: 1rem;
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-    border: 3px solid white;
-    flex-shrink: 0;
-}
-
-.profile-photo img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: top center;
-}
-
-.profile-name-role {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-}
-
-.profile-detail-new .profile-name {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: var(--text-primary, #111111);
-    margin: 0;
-}
-
-.profile-detail-new .profile-role-badge {
-    display: inline-block;
-    padding: 0.4rem 0.85rem;
-    background: linear-gradient(135deg, #c9a227 0%, #ddb93d 100%);
-    color: #1a1a1a;
-    border-radius: 50px;
-    font-size: 0.75rem;
-    font-weight: 600;
-}
-
-/* Bottom Left - What He Brings */
-.profile-brings {
-    background: linear-gradient(135deg, #1a5f3c 0%, #0f3d26 100%);
-    border-radius: 1rem;
-    padding: 1.25rem;
-    color: white;
-    flex: 1;
-}
-
-.profile-brings h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #ddb93d;
-    margin: 0 0 0.85rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-}
-
-.profile-brings ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-brings ul li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.6rem;
-    font-size: 0.85rem;
-    line-height: 1.55;
-    color: rgba(255, 255, 255, 0.9);
-}
-
-.profile-brings ul li::before {
-    content: '✓';
-    position: absolute;
-    left: 0;
-    color: #ddb93d;
-    font-weight: bold;
-    font-size: 0.8rem;
-}
-
-.profile-brings ul li:last-child {
-    margin-bottom: 0;
-}
-
-/* Right Column - Professional Background */
-.profile-right {
-    background: white;
-    border-radius: 1rem;
-    padding: 1.5rem;
-    border: 1px solid rgba(26, 95, 60, 0.08);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    display: flex;
-    flex-direction: column;
-}
-
-.profile-right h4 {
-    font-size: 1.15rem;
-    font-weight: 700;
-    color: #c9a227;
-    margin: 0 0 1rem;
-    padding-bottom: 0.65rem;
-    border-bottom: 2px solid #c9a227;
-}
-
-.profile-right ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    flex: 1;
-}
-
-.profile-right ul li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    font-size: 0.9rem;
-    line-height: 1.65;
-    color: var(--text-secondary, #374151);
-}
-
-.profile-right ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #c9a227;
-    font-weight: bold;
-}
-
-.profile-right ul li:last-child {
-    margin-bottom: 0;
-}
-
-/* Profile Section - for multiple sections in right column */
-.profile-section {
-    margin-bottom: 1.5rem;
-    padding-bottom: 1.25rem;
-    border-bottom: 1px solid rgba(26, 95, 60, 0.1);
-}
-
-.profile-section:last-child {
-    margin-bottom: 0;
-    padding-bottom: 0;
-    border-bottom: none;
-}
-
-.profile-section h4 {
-    font-size: 1rem;
-    font-weight: 700;
-    color: #c9a227;
-    margin: 0 0 0.75rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid #c9a227;
-}
-
-.profile-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.profile-section ul li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.5rem;
-    font-size: 0.85rem;
-    line-height: 1.6;
-    color: var(--text-secondary, #374151);
-}
-
-.profile-section ul li::before {
-    content: '•';
-    position: absolute;
-    left: 0;
-    color: #c9a227;
-    font-weight: bold;
-}
-
-.profile-section ul li:last-child {
-    margin-bottom: 0;
-}
-
-/* Responsive Design */
-/* Responsive Design */
-@media (max-width: 1200px) {
-    .team-overview-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .leadership-pillars-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .profile-content-grid {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .profile-content-grid .profile-card:last-child {
-        grid-column: span 2;
-    }
-
-    .profile-detail-new {
-        grid-template-columns: 280px 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .team-hero {
-        padding: 6rem 1rem 2rem;
-        /* Added top padding for fixed nav */
-        min-height: 100dvh;
-        /* Use dynamic viewport height for mobile */
-        height: 100dvh;
-    }
-
-    .team-title {
-        font-size: 2.5rem;
-        letter-spacing: 1px;
-    }
-
-    .team-subtitle {
-        font-size: 1.25rem;
-        padding: 0 1rem;
-    }
-
-    .team-tagline {
-        font-size: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .team-hero-cta {
-        margin-top: auto;
-        /* Push CTA to bottom */
-        padding-bottom: 2rem;
-    }
-
-    .team-hero-background {
-        background-attachment: scroll;
-        /* Fix for mobile bg issues */
-    }
-
-    .team-section {
-        padding: 3rem 1rem;
-    }
-
-    .section-header h2 {
-        font-size: 2rem;
-    }
-
-    .team-overview-grid {
-        grid-template-columns: 1fr;
-        max-width: 400px;
-    }
-
-    .leadership-pillars-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-image {
-        width: 120px;
-        height: 150px;
-    }
-
-    .profile-content-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .profile-content-grid .profile-card:last-child {
-        grid-column: auto;
-    }
-
-    .profile-detail {
-        padding: 1.5rem;
-        margin-bottom: 3rem;
-    }
-
-    .sticky-nav-container {
-        gap: 0.5rem;
-    }
-
-    .sticky-nav-item {
-        padding: 0.4rem 0.75rem;
-        font-size: 0.75rem;
-    }
-
-    /* New profile layout responsive */
-    .profile-detail-new {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        scroll-margin-top: 100px;
-    }
-
-    .profile-identity {
-        flex-direction: row;
-        text-align: left;
-        gap: 1rem;
-        align-items: center;
-    }
-
-    .profile-photo {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        /* Circle on mobile */
-        margin-bottom: 0;
-    }
-
-    .profile-name-role {
-        align-items: flex-start;
-        flex: 1;
-    }
-
-    .profile-detail-new .profile-name {
-        font-size: 1.25rem;
-        margin-bottom: 0.25rem;
-    }
-
-    .profile-detail-new .profile-role-badge {
-        font-size: 0.7rem;
-        padding: 0.3rem 0.6rem;
-    }
-
-    .profile-brings {
-        padding: 1rem;
-    }
-
-    .profile-right {
-        padding: 1.25rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .team-title {
-        font-size: 2rem;
-    }
-
-    .team-subtitle {
-        font-size: 1.1rem;
-    }
-
-    .section-header h2 {
-        font-size: 1.75rem;
-    }
-
-    .leadership-statement {
-        font-size: 1.1rem;
-    }
-
-    .profile-identity {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .profile-photo {
-        width: 100px;
-        height: 100px;
-        margin-bottom: 0.5rem;
-    }
-
-    .profile-name-role {
-        align-items: center;
-    }
-
-    .team-hero-cta {
-        padding-bottom: 4rem;
-        /* More space for browser bottom controls */
-    }
-}
-
-/* Smooth scroll with reduced motion support */
-html {
-    scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    html {
-        scroll-behavior: auto;
-    }
+/* ============================================================
+   Our Team — page-specific layout in the new .abge theme.
+   Tokens (--copper-600, --navy-900, etc.) inherit from `.abge`.
+   ============================================================ */
+
+/* ---------- Leadership pillars ---------- */
+.our-team-page .pillar-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(16px, 1.8vw, 24px);
+  margin-top: clamp(34px, 4vw, 52px);
+}
+.our-team-page .pillar-card {
+  position: relative;
+  padding: 30px 26px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+}
+.our-team-page .pillar-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+  border-color: #d4dade;
+}
+.our-team-page .pillar-card .p-ic {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  background: var(--navy-900);
+  color: var(--copper-300);
+  display: grid;
+  place-items: center;
+  margin-bottom: 18px;
+}
+.our-team-page .pillar-card .p-ic svg { width: 24px; height: 24px; }
+.our-team-page .pillar-card .p-step {
+  position: absolute;
+  top: 26px;
+  right: 26px;
+  font-family: var(--display);
+  font-weight: 800;
+  font-size: 13px;
+  color: var(--copper-600);
+  letter-spacing: 0.05em;
+}
+.our-team-page .pillar-card h3 { color: var(--ink); font-size: 19px; }
+.our-team-page .pillar-card ul { list-style: none; margin: 14px 0 0; padding: 0; }
+.our-team-page .pillar-card ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-top: 9px;
+  font-size: 13.5px;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.our-team-page .pillar-card ul li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--copper-600);
+}
+@media (max-width: 1000px) { .our-team-page .pillar-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .our-team-page .pillar-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Team overview cards ---------- */
+.our-team-page .team-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(18px, 2vw, 26px);
+  margin-top: clamp(34px, 4vw, 52px);
+}
+.our-team-page .team-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  text-align: left;
+  transition: transform .3s var(--ease), box-shadow .3s, border-color .3s;
+}
+.our-team-page .team-card:hover,
+.our-team-page .team-card:focus-visible {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-md);
+  border-color: #d4dade;
+  outline: none;
+}
+.our-team-page .team-photo {
+  position: relative;
+  aspect-ratio: 4/5;
+  overflow: hidden;
+  background: var(--warm-2);
+}
+.our-team-page .team-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform .5s var(--ease);
+}
+.our-team-page .team-card:hover .team-photo img { transform: scale(1.04); }
+.our-team-page .team-body { padding: 22px 22px 24px; display: flex; flex-direction: column; flex: 1; }
+.our-team-page .team-body .role-k {
+  font-family: var(--display);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper-600);
+}
+.our-team-page .team-body h3 { color: var(--ink); font-size: 20px; margin-top: 7px; }
+.our-team-page .team-bullets { list-style: none; margin: 14px 0 0; padding: 0; }
+.our-team-page .team-bullets li {
+  position: relative;
+  padding-left: 18px;
+  margin-top: 8px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+.our-team-page .team-bullets li::before {
+  content: "";
+  position: absolute;
+  left: 2px;
+  top: 7px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--copper-500);
+}
+.our-team-page .team-link {
+  margin-top: auto;
+  padding-top: 18px;
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 13.5px;
+  color: var(--green-700);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.our-team-page .team-card:hover .team-link { color: var(--copper-700); }
+.our-team-page .team-link .arr { transition: transform .25s var(--ease); }
+.our-team-page .team-card:hover .team-link .arr { transform: translateX(4px); }
+@media (max-width: 1000px) { .our-team-page .team-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .our-team-page .team-grid { grid-template-columns: 1fr; } }
+
+/* ---------- Detailed profile cards ---------- */
+.our-team-page .profile-list { display: grid; gap: clamp(20px, 2.5vw, 30px); margin-top: clamp(34px, 4vw, 52px); }
+.our-team-page .profile-card {
+  scroll-margin-top: 110px;
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  padding: clamp(24px, 3vw, 40px);
+}
+.our-team-page .profile-head {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding-bottom: 26px;
+  margin-bottom: 26px;
+  border-bottom: 1px solid var(--line);
+}
+.our-team-page .profile-photo {
+  width: 84px;
+  height: 84px;
+  flex: none;
+  border-radius: 14px;
+  overflow: hidden;
+  background: var(--warm-2);
+  box-shadow: var(--shadow-sm);
+}
+.our-team-page .profile-photo img { width: 100%; height: 100%; object-fit: cover; object-position: top center; }
+.our-team-page .profile-id h3 { color: var(--ink); font-size: clamp(22px, 2.4vw, 28px); }
+.our-team-page .profile-role {
+  display: inline-block;
+  margin-top: 8px;
+  font-family: var(--display);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--copper-700);
+  background: var(--copper-050);
+  padding: 6px 12px;
+  border-radius: 4px;
+}
+.our-team-page .profile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(22px, 3vw, 40px); }
+.our-team-page .profile-block h4 {
+  font-family: var(--display);
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding-bottom: 12px;
+  margin-bottom: 4px;
+  border-bottom: 2px solid var(--copper-300);
+  display: inline-block;
+}
+.our-team-page .profile-block ul { list-style: none; margin: 8px 0 0; padding: 0; }
+.our-team-page .profile-block ul li {
+  position: relative;
+  padding-left: 22px;
+  margin-top: 11px;
+  font-size: 14px;
+  color: var(--body);
+  line-height: 1.6;
+}
+.our-team-page .profile-block ul li::before {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--copper-600);
+}
+@media (max-width: 760px) {
+  .our-team-page .profile-grid { grid-template-columns: 1fr; gap: 24px; }
+  .our-team-page .profile-head { flex-direction: column; align-items: flex-start; gap: 14px; }
 }
