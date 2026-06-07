@@ -110,7 +110,7 @@ function Home() {
             </p>
             <div className="hero-cta" data-aos="fade-up" data-aos-delay="240">
               <Link to="/contact" className="btn btn-navy btn-lg">Request a Quotation <span className="arr">→</span></Link>
-              <Link to="/market-intelligence" className="btn btn-outline btn-lg">Explore the Knowledge Centre</Link>
+              <Link to="/knowledge" className="btn btn-outline btn-lg">Explore the Knowledge Centre</Link>
             </div>
             <div className="hero-meta" data-aos="fade-up" data-aos-delay="320">
               <div className="hm">
@@ -132,8 +132,8 @@ function Home() {
               <img src={heroImg} alt="Premium export-grade Indian dry red chilli" />
             </div>
             <div className="hero-badge">
-              <div className="hb-n">CA-Led</div>
-              <div className="hb-k">a Chartered Accountant–governed trade desk</div>
+              <div className="hb-n">SHU · ASTA</div>
+              <div className="hb-k">graded to the parameters your market specifies</div>
             </div>
           </div>
         </div>
@@ -188,7 +188,7 @@ function Home() {
                 payment terms, so goods clear without friction and buyers know exactly what they
                 are receiving.
               </p>
-              <Link to="/vision" className="txt-link" style={{ marginTop: '24px' }}>Read our vision &amp; standards <span className="arr">→</span></Link>
+              <Link to="/about" className="txt-link" style={{ marginTop: '24px' }}>Read our vision &amp; standards <span className="arr">→</span></Link>
             </div>
           </div>
         </div>
@@ -204,7 +204,7 @@ function Home() {
               technical parameters and the markets they suit, not a generic brochure.</p>
           </div>
           <div className="cat-grid">
-            <Link to="/what-we-export" state={{ category: 'chilli' }} className="cat-card" data-aos="fade-up">
+            <Link to="/chilli" className="cat-card" data-aos="fade-up">
               <div className="cat-img">
                 <img src={chilliImg} alt="Export-grade dry red chilli" />
                 <span className="cat-tag">Dry Red Chilli</span>
@@ -221,7 +221,7 @@ function Home() {
                 <span className="cat-link">View products <span className="arr">→</span></span>
               </div>
             </Link>
-            <Link to="/what-we-export" state={{ category: 'coffee' }} className="cat-card" data-aos="fade-up" data-aos-delay="120">
+            <Link to="/coffee" className="cat-card" data-aos="fade-up" data-aos-delay="120">
               <div className="cat-img">
                 <div className="ph green-ph">
                   <div className="ph-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.3"><path d="M5 8h11v5a5 5 0 01-5 5H10a5 5 0 01-5-5V8z"/><path d="M16 9h2.5a2.5 2.5 0 010 5H16"/><path d="M8 2c-.6 1 .6 2 0 3M11 2c-.6 1 .6 2 0 3"/></svg></div>
@@ -255,10 +255,10 @@ function Home() {
               <p className="lead">The reference desk we wish existed when we started, written to help you
                 specify correctly and buy with confidence.</p>
             </div>
-            <Link to="/market-intelligence" className="btn btn-outline">All articles <span className="arr">→</span></Link>
+            <Link to="/knowledge" className="btn btn-outline">All articles <span className="arr">→</span></Link>
           </div>
           <div className="know-grid">
-            <Link to="/market-intelligence" className="know-card" data-aos="fade-up">
+            <Link to="/knowledge" className="know-card" data-aos="fade-up">
               <div className="know-img">
                 <div className="ph warm-ph"></div>
                 <span className="know-cat">Chilli</span>
@@ -271,7 +271,7 @@ function Home() {
                 <span className="txt-link">Read article <span className="arr">→</span></span>
               </div>
             </Link>
-            <Link to="/market-intelligence" className="know-card" data-aos="fade-up" data-aos-delay="100">
+            <Link to="/knowledge" className="know-card" data-aos="fade-up" data-aos-delay="100">
               <div className="know-img">
                 <div className="ph warm-ph"></div>
                 <span className="know-cat">Chilli</span>
@@ -284,7 +284,7 @@ function Home() {
                 <span className="txt-link">Read article <span className="arr">→</span></span>
               </div>
             </Link>
-            <Link to="/market-intelligence" className="know-card" data-aos="fade-up" data-aos-delay="200">
+            <Link to="/knowledge" className="know-card" data-aos="fade-up" data-aos-delay="200">
               <div className="know-img">
                 <div className="ph green-ph"></div>
                 <span className="know-cat">Coffee</span>
@@ -312,7 +312,7 @@ function Home() {
                 From the first requirement discussion to delivery at your port, every stage is
                 defined, recorded and visible to you. Nothing is left to "we'll sort it later".
               </p>
-              <Link to="/operational-model" className="btn btn-navy" style={{ marginTop: '26px' }}>Walk the full process <span className="arr">→</span></Link>
+              <Link to="/export-process" className="btn btn-navy" style={{ marginTop: '26px' }}>Walk the full process <span className="arr">→</span></Link>
             </div>
             <div data-aos="fade-up" data-aos-delay="120">
               <ol className="proc-list">
@@ -423,7 +423,7 @@ function Home() {
             quotation, usually within two business days.</p>
           <div className="cta-actions" data-aos="fade-up" data-aos-delay="240">
             <Link to="/contact" className="btn btn-copper btn-lg">Request a Quotation <span className="arr">→</span></Link>
-            <Link to="/what-we-export" className="btn btn-ghost-light btn-lg">View Full Portfolio</Link>
+            <Link to="/chilli" className="btn btn-ghost-light btn-lg">View Full Portfolio</Link>
           </div>
         </div>
       </section>
