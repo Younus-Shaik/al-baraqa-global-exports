@@ -99,7 +99,7 @@ function TradeTerms() {
                     <li>Any claims regarding product quality, quantity, or shipment damage must be raised within <strong>7 days</strong> of receipt of goods at the destination port, supported by photographic evidence and relevant documentation</li>
                     <li>Claims arising from damage during transit under CIF/CFR terms should be directed to the insurance provider</li>
                     <li>Both parties agree to resolve disputes amicably through negotiation. If unresolved, disputes shall be referred to arbitration under Indian law</li>
-                    <li>The jurisdiction for any legal proceedings shall be the courts in Kadapa District, Andhra Pradesh, India</li>
+                    <li>The jurisdiction for any legal proceedings shall be the courts in Hyderabad, Telangana, India</li>
                 </ul>
             </div>
 
@@ -128,7 +128,7 @@ function TradeTerms() {
                 <h2>Contact Us</h2>
                 <p>For trade inquiries, quotation requests, or questions about our trade terms:</p>
                 <p><strong>Al Baraqah Global Exports</strong></p>
-                <p>21/196, Hyderkhan Street, Proddatur, Kadapa District, Andhra Pradesh, 516360</p>
+                <p>7008, H.No 5-497, Near Hitec City, Izzathnagar, Khanamet, Kondapur, Hyderabad, Telangana 500084</p>
                 <p>Email: <a href="mailto:abglobalexports2k26@gmail.com">abglobalexports2k26@gmail.com</a></p>
                 <p>Phone: +91 9030873730</p>
                 <p style={{ marginTop: '1rem' }}>

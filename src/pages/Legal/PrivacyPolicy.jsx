@@ -125,7 +125,7 @@ function PrivacyPolicy() {
                 <h2>Contact Us</h2>
                 <p>If you have any questions about this Privacy Policy, please contact us:</p>
                 <p><strong>Al Baraqah Global Exports</strong></p>
-                <p>21/196, Hyderkhan Street, Proddatur, Kadapa District, Andhra Pradesh, 516360</p>
+                <p>7008, H.No 5-497, Near Hitec City, Izzathnagar, Khanamet, Kondapur, Hyderabad, Telangana 500084</p>
                 <p>Email: <a href="mailto:abglobalexports2k26@gmail.com">abglobalexports2k26@gmail.com</a></p>
                 <p>Phone: +91 9030873730</p>
                 <p style={{ marginTop: '1rem' }}>

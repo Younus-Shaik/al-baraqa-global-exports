@@ -108,7 +108,7 @@ function TermsOfService() {
             <div className="legal-section" data-aos="fade-up">
                 <h2>9. Governing Law & Jurisdiction</h2>
                 <p>
-                    These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from the use of this website or our services shall be subject to the exclusive jurisdiction of the courts in Kadapa District, Andhra Pradesh, India.
+                    These Terms of Service are governed by and construed in accordance with the laws of India. Any disputes arising from the use of this website or our services shall be subject to the exclusive jurisdiction of the courts in Hyderabad, Telangana, India.
                 </p>
             </div>
 
@@ -123,7 +123,7 @@ function TermsOfService() {
                 <h2>Contact Us</h2>
                 <p>If you have any questions about these Terms of Service, please contact us:</p>
                 <p><strong>Al Baraqah Global Exports</strong></p>
-                <p>21/196, Hyderkhan Street, Proddatur, Kadapa District, Andhra Pradesh, 516360</p>
+                <p>7008, H.No 5-497, Near Hitec City, Izzathnagar, Khanamet, Kondapur, Hyderabad, Telangana 500084</p>
                 <p>Email: <a href="mailto:abglobalexports2k26@gmail.com">abglobalexports2k26@gmail.com</a></p>
                 <p>Phone: +91 9030873730</p>
                 <p style={{ marginTop: '1rem' }}>

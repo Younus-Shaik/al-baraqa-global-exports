@@ -225,7 +225,7 @@ function Contact() {
                 </div>
                 <div className="ci-row">
                   <span className="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><path d="M12 21s7-6.5 7-12a7 7 0 10-14 0c0 5.5 7 12 7 12z" /><circle cx="12" cy="9" r="2.5" /></svg></span>
-                  <div><div className="ci-k">Based In</div><div className="ci-v">Proddatur, Andhra Pradesh, India</div></div>
+                  <div><div className="ci-k">Based In</div><div className="ci-v">7008, H.No 5-497, Near Hitec City, Izzathnagar,<br />Khanamet, Kondapur, Hyderabad, Telangana 500084</div></div>
                 </div>
                 <div className="ci-row">
                   <span className="ci-ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.7"><circle cx="12" cy="12" r="9" /><path d="M12 7v5l3 3" /></svg></span>
