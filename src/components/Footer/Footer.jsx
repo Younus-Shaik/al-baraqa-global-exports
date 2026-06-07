@@ -57,7 +57,18 @@ function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Quick Navigation */}
+          {/* Column 2: Products */}
+          <div className="footer-column">
+            <h3 className="footer-heading">Products</h3>
+            <nav className="footer-nav">
+              <Link to="/what-we-export" state={{ category: 'chilli' }} className="footer-link" onClick={scrollToTop}>Dry Red Chilli</Link>
+              <Link to="/what-we-export" state={{ category: 'coffee' }} className="footer-link" onClick={scrollToTop}>Coffee</Link>
+              <Link to="/what-we-export" className="footer-link" onClick={scrollToTop}>Specification Sheets</Link>
+              <Link to="/contact" className="footer-link" onClick={scrollToTop}>Request a Quote</Link>
+            </nav>
+          </div>
+
+          {/* Column 3: Quick Navigation */}
           <div className="footer-column">
             <h3 className="footer-heading">Quick Navigation</h3>
             <nav className="footer-nav">
@@ -103,39 +114,6 @@ function Footer() {
             </Link>
           </div>
         </div>
-
-        {location.pathname !== '/our-team' && (
-          <div>
-            {/* Column 3: Our Team */}
-            <div className="footer-column">
-              <Link to="/our-team" className="footer-heading-link" onClick={scrollToTop} title="Click to see team strengths & expertise">
-                <h3 className="footer-heading">Our Team</h3>
-              </Link>
-              <div className="team-members">
-                <div className="team-member" title="Click to view full profile of Rafa - Founder & CEO" onClick={() => navigateToTeamMember('founder-ceo')}>
-                  <h4>Rafa</h4>
-                  <p className="team-role">Founder & Chief Executive Officer (CEO)</p>
-                  <p className="team-bio">Chartered Accountant with leadership over trade governance, compliance, and financial risk management.</p>
-                </div>
-                <div className="team-member" title="Click to view full profile of Muzammil - Chief Trade Intelligence Officer" onClick={() => navigateToTeamMember('trade-intelligence')}>
-                  <h4>Muzammil</h4>
-                  <p className="team-role">Chief Trade Intelligence Officer</p>
-                  <p className="team-bio">Leads global market research, product intelligence, pricing insights, and strategic trade decision support.</p>
-                </div>
-                <div className="team-member" title="Click to view full profile of Younus - Chief Platform & Systems Officer" onClick={() => navigateToTeamMember('platform-systems')}>
-                  <h4>Younus</h4>
-                  <p className="team-role">Chief Platform & Systems Officer</p>
-                  <p className="team-bio">Architects and manages the digital platform, trade systems, automation, and technology infrastructure.</p>
-                </div>
-                <div className="team-member" title="Click to view full profile of Mudassir - Chief Operations Officer" onClick={() => navigateToTeamMember('operations')}>
-                  <h4>Mudassir</h4>
-                  <p className="team-role">Chief Operations Officer</p>
-                  <p className="team-bio">Oversees end-to-end export operations, procurement coordination, logistics, and execution discipline.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        )}
 
         <div className="footer-bottom">
           <p>&copy; 2026 Al Baraqah Global Exports. All rights reserved.</p>
